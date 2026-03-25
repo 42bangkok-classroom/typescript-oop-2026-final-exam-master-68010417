@@ -8,13 +8,9 @@ import * as path from 'path';
 export class ProductService {
   private readonly dataPath = path.join(process.cwd(), 'data', 'products.json');
 
-  findall(): ApiResponse<Product[]> {
+  findall() {
     const data = fs.readFileSync(this.dataPath, 'utf8');
     const products = JSON.parse(data) as Product[];
-    return {
-      success: true,
-      data: products,
-      message: 'Fetched products successfully',
-    };
+    return products;
   }
 }

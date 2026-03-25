@@ -8,7 +8,7 @@ export class ProductController {
   constructor(private readonly ProductService: ProductService) {}
 
   @Get('products')
-  findall(): ApiResponse<Product> {
+  findall(): ApiResponse<Product[]> {
     return this.ProductService.findall();
   }
 }

@@ -2,7 +2,6 @@ import { Controller, Get } from '@nestjs/common';
 import { ProductService } from './product.service';
 import type { ApiResponse } from 'src/interfaces/response.interface';
 import type { Product } from './product.interface';
-import { count } from 'console';
 
 @Controller('products')
 export class ProductController {
